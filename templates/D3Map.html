@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon"  href="#"/>
+  <link rel="stylesheet" href="../dist/assets/layui/css/layui.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1820558_2pbzdbt9knb.css">
+  <link rel="stylesheet" href="../dist/css/KnowledgeMap.min.css">
+
+  <style>
+      .mapLegend:hover{
+          fill: #009688;
+      }
+      .mapLegend{
+          cursor: pointer;
+      }
+  </style>
+  <title>离散数学知识图谱</title>
+</head>
+<body>
+  <div class="mind-box">
+    <div class="mind-l">
+      <div class="ml-m">
+        <div class="layui-tab layui-tab-brief" lay-filter="ThemeTab">
+          <ul class="layui-tab-title ml-ht">
+            <li class="layui-this">矢量关联</li>
+            <li>学习规划</li>
+            <li>测评分析</li>
+          </ul>
+          <div class="layui-tab-content ml-box">
+            <div class="layui-tab-item layui-show">
+              <div class="link-type">
+                <div class="title">关联类型</div>
+                <div class="content">
+                  <div class="button-group">
+                    <div class="btn-wp active">
+                      <button type="button" class="layui-btn">掌握程度</button>
+                      <img src="../dist/images/chose.svg" alt="flag" class="">
+                    </div>
+                    <div class="btn-wp">
+                      <button type="button" class="layui-btn layui-btn-danger">章节展示</button>
+                      <img src="../dist/images/chose.svg" alt="flag" class="">
+                    </div>
+                    <div class="btn-wp">
+                      <button type="button" class="layui-btn layui-btn-normal">课程安排</button>
+                      <img src="../dist/images/chose.svg" alt="flag" class="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-tab-item">
+              <div class="link-type">
+                <div class="title">规划方案</div>
+                <div class="content">
+                  <div class="button-group">
+                    <div class="btn-wp">
+                      <button type="button" class="layui-btn">巩固规划</button>
+                      <img src="../dist/images/chose.svg" alt="flag" class="">
+                    </div>
+                    <div class="btn-wp">
+                      <button type="button" class="layui-btn layui-btn-danger">提高规划</button>
+                      <img src="../dist/images/chose.svg" alt="flag" class="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-tab-item">
+              <div class="link-type">
+                <div class="title">测评分析</div>
+                <div class="content">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="main-content">
+              <div class="title" id="con_title">掌握程度</div>
+              <div class="content">
+                <div class="mastery con_change">
+                  <div id="test12" class="demo-tree-more"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mind-con">
+      <div class="mind-top clearfix">
+        <div class="pull-left">
+          <div class="search">
+              <span id="Js_search">
+                <i class="iconfont icon-sousuo-copy" style="color: #647b9b"></i>
+              </span>
+            <input type="text" autocomplete="off" placeholder="请输入关键词" title="搜索">
+          </div>
+          <div class="show-num">
+            显示节点个数：<span id="Js_nodes_num">54</span>
+          </div>
+        </div>
+
+        <div class="rightPos">
+          <div class="opp hidden">
+            <i class="iconfont icon-dp-transform-table-copy"></i> 转换表格
+          </div>
+          <div class="opp hidden">
+            <i class="iconfont icon-fenqu"></i> 分区展示
+          </div>
+          <div class="opp" id="fresh">
+            <i class="iconfont icon-fresh"></i> 刷新
+          </div>
+          <div class="opp" id="saveSvgToPng">
+            <i class="iconfont icon-yuncangiconxin-"></i> 图片保存
+          </div>
+          <div class="opp" id="fullScreen">
+            <i class="iconfont icon-fullscreen"></i> 全屏
+          </div>
+        </div>
+      </div>
+
+      <div class="mind-body">
+        <div class="svg-wp" id="SvgWp">
+          <div class="legend-wp" id="Js_legend">
+            <div class="rect—btn"></div><span>较好</span>
+            <div class="rect—btn"></div><span>一般</span>
+            <div class="rect—btn"></div><span>较差</span>
+            <div class="rect—btn"></div><span>未学习</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../dist/assets/layui/layui.all.js"></script>
+  <script src="../dist/js/d3.min.js"></script>
+  <script src="../dist/js/d3-tip.js"></script>
+  <script src="../dist/js/KnowledgeMap.min.js"></script>
+
+</body>
+</html>
